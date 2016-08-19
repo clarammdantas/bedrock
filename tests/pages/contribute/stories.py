@@ -13,7 +13,7 @@ class ContributeStoriesPage(ContributeBasePage):
     # a shared template so it's probably overkill to test them all.
     URL_TEMPLATE = '/{locale}/contribute/stories/shreyas'
 
-    _story_locator = (By.CSS_SELECTOR, '.story-more')
+    _story_locator = (By.CLASS_NAME, 'story-more')
     _story_toggle_locator = (By.CSS_SELECTOR, '.more-toggle > button')
 
     def show_story(self):

@@ -47,7 +47,6 @@ class DevicesPage(FirefoxBasePage):
         self.scroll_element_into_view(*self._tv_thumbnail_locator).click()
         el = self.find_element(*self._tv_detail_locator)
         detail = DeviceDetail(self, root=el)
-        self.find_element(*self._tv_thumbnail_locator).click()
         # wait until close button is displayed for detail pane to initialize
         self.wait.until(lambda s: detail.is_close_displayed)
         return detail
